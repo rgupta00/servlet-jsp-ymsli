@@ -1,0 +1,13 @@
+
+In terminal, run:
+
+fuser -n tcp 8080
+Now we got some output like this:
+
+8080/tcp:            15008
+Here 15008 is where our apache is running.
+
+Kill that using:
+
+kill -9 15008
+Done.
