@@ -1,0 +1,48 @@
+
+imp link for servlet jsp:
+--------------------------
+
+good book on js
+https://medium.com/jspoint/how-javascript-works-in-browser-and-node-ab7d0d09ac2f
+
+that book:
+
+http://bedford-computing.co.uk/learning/wp-content/uploads/2016/08/JavaScript._.jQuery.The_.Missing.Manual.pdf
+
+
+diff bw web server vs web container:
+--------------------------------------
+https://stackoverflow.com/questions/30632/difference-between-the-apache-http-server-and-apache-tomcat#:~:text=So%20basically%20Apache%20is%20an,which%20is%20a%20servlet%20container.&text=JSP%20files%20(which%20are%20similar,which%20is%20then%20compiled%20to%20.
+
+
+reading : tomcat vs wildfly * we dont need to do Phd in this :)
+---------------------------------------------
+http://www.mastertheboss.com/other/jboss-stuff/jboss-vs-tomcat-and-spring#:~:text=WildFly%20vs%20Tomcat%3A%20the%20basics,lighter%20out%20of%20the%20box.
+
+
+
+how AtomicInteger works in Java (CAS)
+
+https://howtodoinjava.com/java/multi-threading/compare-and-swap-cas-algorithm/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
