@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.customerapp.dao.ConnectionFactory;
 import com.customerapp.dao.Customer;
@@ -47,11 +48,17 @@ public class AddCustomerController extends HttpServlet {
 		}catch(DataAccessException ex) {
 			ex.printStackTrace();
 		}
-		request.setAttribute("customer", customer);
-		RequestDispatcher rd=request.getRequestDispatcher("success.jsp");
-		rd.forward(request, response);
+		//only sol for time being...we have to increae the scope of this variable
 		
-		//response.sendRedirect("success.jsp");
+		HttpSession httpSession=request.getSession();
+		
+		httpSession.setAttribute("customer", customer);
+		//i have to use here ie sendRedirect
+		
+		//RequestDispatcher rd=request.getRequestDispatcher("success.jsp");
+		//rd.forward(request, response);
+		
+		response.sendRedirect("success.jsp");
 	}
 
 }

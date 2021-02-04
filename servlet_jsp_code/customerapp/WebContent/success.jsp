@@ -10,7 +10,7 @@
 <body>
 success, customer is added to db
 <%
-	Customer customer=(Customer)request.getAttribute("customer");
+	Customer customer=(Customer)session.getAttribute("customer");
 	out.print("customer id: "+customer.getId()+"<br>");
 	out.print("customer name: "+customer.getName()+"<br>");
 	out.print("customer address: "+customer.getAddress()+"<br>");

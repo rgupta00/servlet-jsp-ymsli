@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>demo2</display-name>
+  <servlet>
+    <servlet-name>S3</servlet-name>
+    <servlet-class>com.demo.S3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S3</servlet-name>
+    <url-pattern>/S3</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>S2</servlet-name>
+    <servlet-class>com.demo.S2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S2</servlet-name>
+    <url-pattern>/S2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>S1</servlet-name>
+    <servlet-class>com.demo.S1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S1</servlet-name>
+    <url-pattern>/S1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>R1</display-name>
+    <servlet-name>R1</servlet-name>
+    <servlet-class>com.demo.R1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>R1</servlet-name>
+    <url-pattern>/R1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>R2</servlet-name>
+    <servlet-class>com.demo.R2</servlet-class>
+     <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>R2</servlet-name>
+    <url-pattern>/R2</url-pattern>
+  </servlet-mapping>
+  
+  <!-- till now object of servlet is create on first req : lazy
+  but sometime i want it should be create as soon as tomcat load the application: eager
+   -->
+  <servlet>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>com.demo.MyServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/foo</url-pattern>
+  </servlet-mapping>
+</web-app>
+
+
