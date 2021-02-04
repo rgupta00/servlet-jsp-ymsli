@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>listnerdemo</display-name>
+  <servlet>
+    <servlet-name>S1</servlet-name>
+    <servlet-class>com.web.controller.S1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S1</servlet-name>
+    <url-pattern>/S1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>S2</servlet-name>
+    <servlet-class>com.web.controller.S2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S2</servlet-name>
+    <url-pattern>/S2</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>dogName</param-name>
+    <param-value>tommy</param-value>
+  </context-param>
+  
+  
+  <listener>
+    <listener-class>com.web.listners.MyServletContextListner</listener-class>
+  </listener>
+  
+  <listener>
+    <listener-class>com.web.listners.MySCAttributeListner</listener-class>
+  </listener>
+  
+  
+</web-app>
