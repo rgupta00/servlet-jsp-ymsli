@@ -4,11 +4,6 @@
   <welcome-file-list>
     <welcome-file>cal.html</welcome-file>
   </welcome-file-list>
-  
-  
-    
-  <!-- -servlet mapping for Counter servlet -->
-  
   <servlet>
     <servlet-name>foo</servlet-name>
     <servlet-class>com.calapp.controller.CounterServlet</servlet-class>
@@ -17,10 +12,6 @@
     <servlet-name>foo</servlet-name>
     <url-pattern>/counter</url-pattern>
   </servlet-mapping>
-  
-  
-    
-  <!-- -servlet mapping for Cal servlet -->
   <servlet>
     <servlet-name>CalController</servlet-name>
     <servlet-class>com.calapp.controller.CalController</servlet-class>
@@ -29,37 +20,34 @@
     <servlet-name>CalController</servlet-name>
     <url-pattern>/cal</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  <!-- -servlet mapping for Hello servlet -->
   <servlet>
     <servlet-name>Hello</servlet-name>
     <servlet-class>com.calapp.controller.Hello</servlet-class>
     <init-param>
-    	<param-name>driverName</param-name>
-    	<param-value>com.mysql.jdbc.Driver</param-value>
+      <param-name>driverName</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
     </init-param>
-     
   </servlet>
   <servlet-mapping>
     <servlet-name>Hello</servlet-name>
     <url-pattern>/Hello</url-pattern>
   </servlet-mapping>
-  
-  <!-- -for whole application -->
-  <!-- parameters are k:v both should be string, they are fixed at run ... -->
   <context-param>
-    	<param-name>adminName</param-name>
-    	<param-value>rajeev</param-value>
+    <param-name>adminName</param-name>
+    <param-value>rajeev</param-value>
   </context-param>
-  
-    <context-param>
-    	<param-name>clientName</param-name>
-    	<param-value>YMSLI</param-value>
+  <context-param>
+    <param-name>clientName</param-name>
+    <param-value>YMSLI</param-value>
   </context-param>
+  <servlet>
+    <description></description>
+    <display-name>GetClientInfo</display-name>
+    <servlet-name>GetClientInfo</servlet-name>
+    <servlet-class>com.calapp.controller.GetClientInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetClientInfo</servlet-name>
+    <url-pattern>/GetClientInfo</url-pattern>
+  </servlet-mapping>
 </web-app>
-
-
-
-
