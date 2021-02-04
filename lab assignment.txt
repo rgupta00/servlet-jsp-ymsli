@@ -1,0 +1,18 @@
+Lab assignment:
+create an product record processing application:
+	1. accept  name, price, qty, manfDate, inspectedDate
+	2. add record to db
+	3. use all discussed design pattern and follow coding practice
+
+		=>MVC
+
+		=> connection object should be put in lister(servletcontext lister)
+		
+		=> factory, singleton for connection factory
+		
+		=> dao and dto
+
+		=> exception wrapping and rethowing
+
+	4. take it as a exam... 
+		
