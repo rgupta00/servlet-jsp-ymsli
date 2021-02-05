@@ -13,8 +13,6 @@
 	User user=(User)request.getAttribute("user");
 	out.print(user.getUsername()+"<br>");
 	out.print(user.getProfile()+"<br>");
-	
-	
 %>
 </body>
 </html>

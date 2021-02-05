@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee;
+ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>loginapp</display-name>
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>
@@ -11,5 +14,38 @@
   <servlet-mapping>
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/loginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SessionCounter</display-name>
+    <servlet-name>SessionCounter</servlet-name>
+    <servlet-class>com.loginapp.controller.SessionCounter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionCounter</servlet-name>
+    <url-pattern>/SessionCounter</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
+  <servlet>
+    <description></description>
+    <display-name>S1</display-name>
+    <servlet-name>S1</servlet-name>
+    <servlet-class>com.loginapp.controller.S1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S1</servlet-name>
+    <url-pattern>/S1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>S2</display-name>
+    <servlet-name>S2</servlet-name>
+    <servlet-class>com.loginapp.controller.S2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S2</servlet-name>
+    <url-pattern>/S2</url-pattern>
   </servlet-mapping>
 </web-app>
