@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee; 
+ http://xmlns.jcp.org/xml/ns/javaee" id="WebApp_ID" version="2.5">
+  <display-name>loginapp</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>com.loginapp.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/loginController</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
+  <servlet>
+    <description></description>
+    <display-name>AddBookController</display-name>
+    <servlet-name>AddBookController</servlet-name>
+    <servlet-class>com.loginapp.controller.AddBookController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddBookController</servlet-name>
+    <url-pattern>/showall</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogOutController</display-name>
+    <servlet-name>LogOutController</servlet-name>
+    <servlet-class>com.loginapp.controller.LogOutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogOutController</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+</web-app>

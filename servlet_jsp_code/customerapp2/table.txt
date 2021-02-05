@@ -1,0 +1,3 @@
+create table customer(id int not null primary key auto_increment, name varchar(80) not null,
+    -> address varchar(80) not null, mobile  varchar(12) not null, email  varchar(50) not null, dob date not null);
+insert into customer(name, address, mobile, email, dob) values('ekta','dehi','465645645','e@e.com','1980-12-12');

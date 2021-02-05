@@ -1,0 +1,8 @@
+package com.loginapp.model;
+
+public class UserNotFoundException extends RuntimeException{
+
+	public UserNotFoundException(String message) {
+		super(message);
+	}
+}
