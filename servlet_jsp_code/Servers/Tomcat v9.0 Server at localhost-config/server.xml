@@ -61,6 +61,7 @@
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
     <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Executor maxThreads="500" minSpareThreads="25" name="tomcatThreadPool" namePrefix="catalina-exec-"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -149,7 +150,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="appann2" path="/appann2" reloadable="true" source="org.eclipse.jst.jee.server:appann2"/></Host>
+      <Context docBase="custapp" path="/custapp" reloadable="true" source="org.eclipse.jst.jee.server:custapp"/></Host>
     </Engine>
   </Service>
 </Server>

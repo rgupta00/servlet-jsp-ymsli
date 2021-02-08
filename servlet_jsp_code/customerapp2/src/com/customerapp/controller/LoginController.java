@@ -23,6 +23,10 @@ public class LoginController extends HttpServlet {
 		String password=request.getParameter("password");
 		try {
 			User user=userService.getUser(username, password);
+			
+			System.out.println("---------------");
+			System.out.println(user);
+			System.out.println("---------------");
 			HttpSession httpSession=request.getSession();
 			httpSession.setAttribute("user", user);
 			response.sendRedirect("custcontroller.do?action=showall");
